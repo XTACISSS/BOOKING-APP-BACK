@@ -8,6 +8,7 @@ const port = process.env.PORT || 9000;
 
 
 //Middleware es una funcion que se ejecuta antes de que se ejecute el controlador
+app.use(express.json()); // Middleware para parsear el body de las peticiones
 app.use('/api', userRoutes);
 
 
@@ -15,6 +16,8 @@ app.use('/api', userRoutes);
 app.get('/', (req,res)=>{
     res.send('Hello World');
 });
+
+
 
 mongoose
     .connect(process.env.MONGODB_URI)

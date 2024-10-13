@@ -2,4 +2,35 @@
 POST http://localhost:9000/api/users HTTP/1.1
 Content-Type: application/json
 
-{}
+
+{
+    "name": "John Doe",
+    "age" : 12,
+    "email": "jhondoe@gmail.com"
+}
+
+
+###
+GET http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://localhost:9000/api/users/670b61611b13b95476120418 HTTP/1.1
+Content-Type: application/json
+
+###
+PUT http://localhost:9000/api/users/670b61611b13b95476120418 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Cabroncete",
+    "age" : 200,
+    "email": "prueba"
+}
+
+###
+DELETE http://localhost:9000/api/users/670b61b41b13b9547612041e HTTP/1.1
+
+
+
+
